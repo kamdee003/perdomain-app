@@ -10,10 +10,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ .
 
 # نسخ مجلد model إذا كان موجوداً (باستخدام .dockerignore للتحكم)
-COPY model/ ./model/ || echo "Model directory not found, continuing..."
+COPY model/ ./model/ 
 
 # نسخ مجلد config
-COPY config/ ./config/ || echo "Config directory not found, continuing..."
+COPY config/ ./config/
 
 # إنشاء مجلد model إذا لم يكن موجوداً
 RUN mkdir -p model
