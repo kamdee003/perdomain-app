@@ -53,4 +53,3 @@ var/
 # Project-specific sensitive files
 config/credentials.json
 config/app_settings.json
-model/
