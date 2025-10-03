@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ .
 
 # نسخ مجلد model من الجذر
-COPY model/ ./model/
+COPY backend/model /repo/model
 
 # نسخ مجلد config من الجذر
 COPY config/ ./config/
