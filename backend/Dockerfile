@@ -2,19 +2,18 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-# نسخ ملف المتطلبات أولاً من المسار الصحيح
+# نسخ ملف المتطلبات أولاً
 COPY backend/requirements.txt .
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-# نسخ باقي ملفات الـ backend
+# نسخ ملفات الـ backend
 COPY backend/ .
 
-# نسخ مجلد model من الجذر
-COPY backend/model /repo/model
+# نسخ مجلد model إذا كان موجوداً (باستخدام .dockerignore للتحكم)
+COPY model/ ./model/ || echo "Model directory not found, continuing..."
 
-# نسخ مجلد config من الجذر
-COPY config/ ./config/
+# نسخ مجلد config
+COPY config/ ./config/ || echo "Config directory not found, continuing..."
 
 # إنشاء مجلد model إذا لم يكن موجوداً
 RUN mkdir -p model
