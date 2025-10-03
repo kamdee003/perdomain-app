@@ -2,17 +2,24 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-# نسخ ملف المتطلبات أولاً (لتحسين caching)
-COPY requirements.txt .
+# نسخ ملف المتطلبات أولاً من المسار الصحيح
+COPY backend/requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# نسخ باقي الملفات
-COPY . .
+# نسخ باقي ملفات الـ backend
+COPY backend/ .
+
+# نسخ مجلد model من الجذر
+COPY model/ ./model/
+
+# نسخ مجلد config من الجذر
+COPY config/ ./config/
 
 # إنشاء مجلد model إذا لم يكن موجوداً
 RUN mkdir -p model
 
-# المنفذ الذي سيعمل عليه التطبيق
+# المنفذ
 EXPOSE 8000
 
 # أمر التشغيل
