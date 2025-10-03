@@ -1,0 +1,11 @@
+﻿{
+  "google_sheets_csv_url": "https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID_HERE/pub?output=csv",
+  "google_sheets_spreadsheet_id": "YOUR_GOOGLE_SHEET_ID_HERE",
+  "google_sheets_sheet_name": "Domains",
+  "atom_spreadsheet_id": "YOUR_ATOM_SHEET_ID_HERE",
+  "atom_sheet_name": "Atom",
+  "ai_api_key": "sk-YOUR_DEEPSEEK_API_KEY_HERE",
+  "ai_enabled": true,
+  "sales_cache_ttl_seconds": 300,
+  "atom_cache_ttl_seconds": 3600
+}

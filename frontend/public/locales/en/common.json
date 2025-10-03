@@ -1,0 +1,13 @@
+{
+  "title": "Find your perfect domain",
+  "subtitle": "Fast, simple, bilingual experience",
+  "search": "Search",
+  "features": {
+    "fast": "Fast Search",
+    "fast_desc": "Check domain availability in seconds.",
+    "bilingual": "Bilingual",
+    "bilingual_desc": "Full support for Arabic and English.",
+    "no_signup": "No Signup",
+    "no_signup_desc": "Start searching instantly without extra steps."
+  }
+}
